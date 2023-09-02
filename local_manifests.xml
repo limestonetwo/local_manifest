@@ -13,6 +13,9 @@
            fetch="https://github.com/droid-legacy"
            revision="lineage-17.1"
            review="" />
+  
+  <remote  name="git"
+           fetch="https://github.com/" />
 
   <!-- rm -->  
   <!-- pkg -->
