@@ -16,7 +16,7 @@
 
   <!-- rm -->  
   <!-- pkg -->
-  <remove-project name="android" />
+  <remove-project name="platform_manifest" />
   <remove-project name="android_build" />
   <remove-project name="android_build_soong" />
   <remove-project name="android_vendor_resurrection" />
