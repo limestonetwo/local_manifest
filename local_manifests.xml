@@ -4,7 +4,7 @@
     fetch="https://github.com/limestonetwo" />
 
 <!-- Trees -->
-  <project path="device/xiaomi/finix" name="device_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="main" />
+  <project path="device/xiaomi/finix" name="device_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="new" />
   <project path="vendor/xiaomi/finix" name="vendor_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="lineage" />
   <project path="kernel/xiaomi/finix" name="kernel_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="main" />
 </manifest>
