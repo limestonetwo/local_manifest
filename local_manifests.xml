@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="limestonetwo"
-    fetch="https://github.com/limestonetwo"
-    revision="main" />
+    fetch="https://github.com/limestonetwo" />
 
   <remote  name="rr-r"
            fetch="https://github.com/ResurrectionRemix-Revived"
@@ -28,6 +27,7 @@
   <remove-project name="packages_apps_LineageParts" />
   <remove-project name="packages_apps_SettingsIntelligence" />
   <remove-project name="packages_apps_Contacts" />
+  <remove-project name="packages_apps_Dialer" />
   <remove-project name="packages_apps_DeskClock" />
   <remove-project name="packages_apps_Messaging" />
   <remove-project name="packages_apps_Bluetooth" />
@@ -59,9 +59,9 @@
   <remove-project name="LineageOS/android_packages_inputmethods_LatinIME" />
 
   <!-- Trees -->
-  <project path="device/xiaomi/finix" name="device_xiaomi_finix" remote="limestonetwo" clone-depth="1" />
-  <project path="vendor/xiaomi/finix" name="vendor_xiaomi_finix" remote="limestonetwo" clone-depth="1" />
-  <project path="kernel/xiaomi/finix" name="kernel_xiaomi_finix" remote="limestonetwo" clone-depth="1" />
+  <project path="device/xiaomi/finix" name="device_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="new" />
+  <project path="vendor/xiaomi/finix" name="vendor_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="lineage" />
+  <project path="kernel/xiaomi/finix" name="kernel_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="main" />
 
   <project path="android" name="manifest" remote="rr-r"/>
   <project path="build/make" name="build" remote="rr-r" >
@@ -83,6 +83,7 @@
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="rr-r" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="rr-r" />
   <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="rr-r" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="rr-r" />
   <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="rr-r" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="rr-r"/>
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="rr-r" />
