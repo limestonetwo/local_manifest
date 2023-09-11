@@ -2,12 +2,119 @@
 <manifest>
   <remote name="limestonetwo"
     fetch="https://github.com/limestonetwo" />
+
+  <remote  name="exthm"
+    fetch="https://github.com/exthmui-legacy"
+    revision="refs/heads/exthm-10" />
+
 <!-- remove -->
   <remove-project name="LineageOS/android_vendor_codeaurora_telephony" />
+
+ <!-- rm -->  
+  <!-- pkg -->
+  <remove-project name="LineageOS/android" />
+  <remove-project name="LineageOS/android_build" />
+  <remove-project name="LineageOS/hudson" />
+  <remove-project name="LineageOS/android_external_bash" />
+  <remove-project name="platform/external/libphonenumber" />
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <remove-project name="LineageOS/android_frameworks_av" />
+<!-- Packages -->
+  <remove-project name="LineageOS/android_packages_apps_AudioFX" />
+  <remove-project name="LineageOS/android_packages_apps_Backgrounds" />
+  <remove-project name="LineageOS/android_packages_apps_Bluetooth" />
+  <remove-project name="LineageOS/android_packages_apps_Dialer" />
+  <remove-project name="LineageOS/android_packages_apps_DocumentsUI" />
+  <remove-project name="LineageOS/android_packages_apps_ExactCalculator" />
+  <remove-project name="LineageOS/android_packages_apps_LineageParts" />
+  <remove-project name="LineageOS/android_packages_apps_Messaging" />
+  <remove-project name="LineageOS/android_packages_apps_Settings" />
+  <remove-project name="LineageOS/android_packages_apps_Updater" /> 
+  <remove-project name="LineageOS/android_packages_apps_SetupWizard" />
+  <remove-project name="LineageOS/android_packages_apps_Trebuchet" />
+  <remove-project name="LineageOS/android_packages_apps_TvSettings" />>
+  <remove-project name="LineageOS/android_packages_apps_CarrierConfig" />
+  <remove-project name="LineageOS/android_packages_apps_Contacts" />
+  <remove-project name="LineageOS/android_packages_apps_DeskClock" />
+  <remove-project name="LineageOS/android_packages_apps_PackageInstaller" />
+  <remove-project name="LineageOS/android_packages_apps_ThemePicker" />
+  <remove-project name="LineageOS/android_packages_services_Telephony" />
+  <!-- system -->
+  <remove-project name="LineageOS/android_system_core" />
+  <remove-project name="LineageOS/android_vendor_lineage" />
+  <remove-project name="LineageOS/android_device_lineage_sepolicy" />
+  <remove-project name="LineageOS/android_lineage-sdk" />
+  <remove-project name="LineageOS/android_system_netd"/>
+
 <!-- Trees -->
   <project path="device/xiaomi/finix" name="device_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="new" />
   <project path="vendor/xiaomi/finix" name="vendor_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="lineage" />
   <project path="kernel/xiaomi/finix" name="kernel_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="main" />
 <!-- Fork -->
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="limestonetwo" clone-depth="1" revision="lineage-17.1" />
+
+  <!-- AOSP Projects -->
+  <project path="build/make" name="android_build" groups="pdk" remote="exthm" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="android" name="android" remote="exthm" />
+  <project path="exthm/hudson" name="hudson" groups="infra" revision="master" remote="exthm" /> 
+
+  <!-- exTHmUI additions-->
+  <project path="external/bash" name="android_external_bash" remote="exthm" />
+  <project path="external/libphonenumber" name="android_external_libphonenumber" groups="pdk" remote="exthm" />
+  <project path="external/asus_stitchimage" name="android_external_asus_stitchimage" groups="pdk" remote="exthm" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/base" name="android_frameworks_base" remote="exthm" />
+  <project path="frameworks/av" remote="exthm" name="android_frameworks_av" groups="pdk" />
+  <project path="packages/apps/CarrierConfig" remote="exthm" name="android_packages_apps_CarrierConfig" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/apps/Contacts" remote="exthm" name="android_packages_apps_Contacts" groups="pdk-fs" />
+  <project path="packages/apps/DeskClock" remote="exthm" name="android_packages_apps_DeskClock" groups="pdk-fs" />
+  <project path="packages/apps/PermissionController" remote="exthm" name="android_packages_apps_PermissionController" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/apps/ThemePicker" remote="exthm" name="android_packages_apps_ThemePicker" groups="pdk-fs" />
+  <project path="packages/services/Telephony" remote="exthm" name="android_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" />
+  <project path="system/netd" remote="exthm" name="android_system_netd" groups="pdk" />
+
+  <!-- Packages -->
+  <project path="packages/apps/AudioFX" name="android_packages_apps_AudioFX" remote="exthm" />
+  <project path="packages/apps/Backgrounds" name="android_packages_apps_Backgrounds" remote="exthm" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="exthm" />
+  <project path="packages/apps/Dialer" remote="exthm" name="android_packages_apps_Dialer" groups="pdk-fs" />
+  <project path="packages/apps/exTHmSettings" name="android_packages_apps_exTHmSettings" remote="exthm" />
+  <project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" remote="exthm" />
+  <project path="packages/apps/Calculator" name="android_packages_apps_Calculator" remote="exthm" />
+  <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="exthm" />
+  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="exthm" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="exthm" />
+  <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="exthm" /> 
+  <project path="packages/apps/APlayer" name="android_packages_apps_APlayer" remote="exthm" />
+  <project path="packages/apps/GamingMode" name="android_packages_apps_GamingMode" remote="exthm" />
+  <project path="packages/apps/MiPushManager" name="android_packages_apps_MiPushManager" remote="exthm" />
+  <project path="packages/apps/MiPushService" name="android_packages_apps_MiPushService" remote="exthm" />
+  <project path="packages/apps/ThemeManager" name="android_packages_apps_ThemeManager" remote="exthm" />
+  <project path="packages/apps/YellowPage" name="android_packages_apps_YellowPage" remote="exthm" />
+  <project path="packages/apps/SetupWizard" remote="exthm" name="android_packages_apps_SetupWizard" />
+  <project path="packages/apps/SoftAPManager" name="android_packages_apps_SoftAPManager" remote="exthm" />
+  <project path="packages/apps/Trebuchet" remote="exthm" name="android_packages_apps_Trebuchet" />
+  <project path="packages/apps/ViaBrowser" remote="exthm" name="android_packages_apps_ViaBrowser" />
+  <project path="packages/apps/TvSettings" name="android_packages_apps_TvSettings" groups="pdk-fs" remote="exthm" />
+
+  <!-- System -->
+  <project path="system/core" name="android_system_core" remote="exthm" />
+  <project path="vendor/exthm" name="android_vendor_exthm" remote="exthm" />
+  <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="exthm" />
+
+  <project path="lineage-sdk" name="android_lineage-sdk" remote="exthm" />
+
+  <!-- exTHmUI Theme -->
+  <project path="packages/themes/DefaultTheme" name="android_packages_themes_DefaultTheme" remote="exthm" />
+
 </manifest>
