@@ -116,7 +116,7 @@
   <!-- System -->
   <project path="system/core" name="android_system_core" remote="exthm" />
   <project path="vendor/exthm" name="android_vendor_exthm" remote="night" revision="exthm-10" />
-  <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="exthm" />
+  <project path="device/lineage/sepolicy" name="exthm_device_lineage_sepolicy" remote="night" revision="exthm-10" />
   <project path="vendor/gapps" name="MindTheGapps/vendor_gapps" remote="gitl" revision="qoppa" />
 
   <project path="lineage-sdk" name="android_lineage-sdk" remote="exthm" />
