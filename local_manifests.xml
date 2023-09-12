@@ -2,6 +2,9 @@
 <manifest>
   <remote name="limestonetwo"
     fetch="https://github.com/limestonetwo" />
+  <remote name="night"
+    fetch="https://github.com/Night-Raids-Reborn" />
+  
 <!-- remove -->
   <remove-project name="LineageOS/android_vendor_codeaurora_telephony" />
 <!-- Trees -->
@@ -9,5 +12,5 @@
   <project path="vendor/xiaomi/finix" name="vendor_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="lineage" />
   <project path="kernel/xiaomi/finix" name="kernel_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="main" />
 <!-- Fork -->
-  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="limestonetwo" clone-depth="1" revision="lineage-17.1" />
+  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="night" clone-depth="1" revision="lineage-17.1" />
 </manifest>
