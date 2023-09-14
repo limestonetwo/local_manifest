@@ -13,4 +13,8 @@
   <project path="kernel/xiaomi/finix" name="kernel_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="main" />
 <!-- Fork -->
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="night" clone-depth="1" revision="lineage-17.1" />
+
+<!-- MindTheGapps -->
+  <project path="vendor/gapps" name="MindTheGapps/vendor_gapps" remote="gitlab" revision="qoppa" />
+
 </manifest>
