@@ -10,7 +10,7 @@
 <!-- remove -->
   <remove-project name="LineageOS/android_vendor_codeaurora_telephony" />
 <!-- Trees -->
-  <project path="device/xiaomi/finix" name="device_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="new" />
+  <project path="device/xiaomi/finix" name="device_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="gapps" />
   <project path="vendor/xiaomi/finix" name="vendor_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="lineage" />
   <project path="kernel/xiaomi/finix" name="kernel_xiaomi_finix" remote="limestonetwo" clone-depth="1" revision="main" />
 <!-- Fork -->
