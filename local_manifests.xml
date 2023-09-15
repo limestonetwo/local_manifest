@@ -4,6 +4,8 @@
     fetch="https://github.com/limestonetwo" />
   <remote name="night"
     fetch="https://github.com/Night-Raids-Reborn" />
+  <remote name="gtl"
+    fetch="https://gitlab.com" />
   
 <!-- remove -->
   <remove-project name="LineageOS/android_vendor_codeaurora_telephony" />
@@ -15,6 +17,6 @@
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="night" clone-depth="1" revision="lineage-17.1" />
 
 <!-- MindTheGapps -->
-  <project path="vendor/gapps" name="MindTheGapps/vendor_gapps" remote="gitlab" revision="qoppa" />
+  <project path="vendor/gapps" name="MindTheGapps/vendor_gapps" remote="gtl" revision="qoppa" />
 
 </manifest>
