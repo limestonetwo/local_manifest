@@ -8,6 +8,10 @@
     fetch="https://gitlab.com" />
   <remote name="losextend"
     fetch="https://github.com/losextend" />
+  <remote  name="exthm"
+    fetch="https://github.com/exthmui-legacy"
+    revision="refs/heads/exthm-10" />
+  
 <!-- remove -->
   <remove-project name="LineageOS/android_vendor_codeaurora_telephony" />
   <remove-project name="LineageOS/android_vendor_lineage" />
@@ -29,6 +33,7 @@
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="losextend" clone-depth="1" revision="lineage-17.1" />
   <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="losextend" clone-depth="1" revision="lineage-17.1" />
   <project path="vendor/lineage" name="android_vendor_lineage" remote="losextend" clone-depth="1" revision="lineage-17.1" />
+  <project path="packages/apps/SoftAPManager" name="android_packages_apps_SoftAPManager" remote="exthm" />
 
 <!-- MindTheGapps -->
   <project path="vendor/gapps" name="MindTheGapps/vendor_gapps" remote="gtl" revision="qoppa" />
